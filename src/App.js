@@ -6,6 +6,7 @@ import { FaTwitter, FaSun, FaMoon, FaGithub, FaUserAstronaut, FaRoute, FaSatelli
 import Divider from './components/Divider';
 import Footer from './components/Footer';
 import Stars from './components/Stars';
+import useTheme from './stores/theme';
 
 const GITHUB = 'https://github.com/carllapierre'
 const TWITTER = 'https://twitter.com/0xWhiskyy'
@@ -13,7 +14,9 @@ const LINKEDIN = 'https://www.linkedin.com/in/carllapierre/'
 
 function App() {
 
-	const [theme, setTheme] = useState('dark');
+	const theme = useTheme(state => state.theme);
+	const setTheme = useTheme(state => state.setTheme);
+
 	const handleThemeChange = (newTheme) => {
 		if (newTheme !== theme) setTheme(newTheme)
 	}

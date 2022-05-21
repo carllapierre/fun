@@ -13,7 +13,7 @@ const LINKEDIN = 'https://www.linkedin.com/in/carllapierre/'
 
 function App() {
 
-	const [theme, setTheme] = useState('light');
+	const [theme, setTheme] = useState('dark');
 	const handleThemeChange = (newTheme) => {
 		if (newTheme !== theme) setTheme(newTheme)
 	}
